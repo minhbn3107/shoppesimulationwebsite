@@ -1,3 +1,7 @@
+.app {
+    overflow: hidden;
+}
+
 /* Header Section */
 .header {
     height: var(--header-height);
@@ -481,6 +485,16 @@
     margin: 0 8px;
 }
 
+.header__mobile-search {
+    padding: 0 12px;
+    display: none;
+}
+
+.header__mobile-search-icon {
+    font-size: 2.6rem;    
+    color: var(--white-color);
+}
+
 .header-logo {
     width: 200px;
 }
@@ -488,6 +502,12 @@
 .header-logo-link {
     text-decoration: none;
     color: transparent;
+    display: block;
+    line-height: 0;
+}
+
+.header__search-checkbox:checked ~ .look-up-frame {
+    display: flex;
 }
 
 .shopee-svg-icon {
@@ -513,6 +533,7 @@
     display: inline-block;
     padding: 0 12px;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .header-cart__container:hover .header-cart__list-items {
@@ -561,7 +582,7 @@
 .header-cart__list {
     padding-left: 0;
     list-style: none;
-    height: 56vh;
+    max-height: 56vh;
     overflow-y: auto;
 }
 
@@ -700,11 +721,12 @@
     flex: 1;
     height: 100%;
     position: relative;
+    display: flex;
 }
 
 .look-up-frame .look-up-frame__input {
-    width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
     border: none;
     outline: none;
     font-size: 1.5rem;
@@ -867,6 +889,58 @@
     display: block;
 }
 
+
+/* Header sort bar */
+.header__sort-bar {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    height: var(--header-sort-bar-height);
+    background-color: var(--white-color);
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    display: none;
+}
+
+.header__sort-item {
+    flex: 1;
+}
+
+.header__sort-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    display: block;
+    height: 100%;
+    line-height: var(--header-sort-bar-height);
+    text-align: center;
+    position: relative;
+}
+
+.header__sort-link::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 60%;
+    border-left: 1px solid #e5e5e5;
+    transform: translateY(-50%);
+}
+
+.header__sort-item--actived .header__sort-link {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.header__sort-item:first-child .header__sort-link::before {
+    display: none;
+}
+
+
 /* App container */
 .app__container {
     background-color: #f5f5f5;
@@ -927,6 +1001,62 @@
 
 .category-item__link:hover {
     color: var(--primary-color);
+}
+
+/* Mobile category */
+.mobile-category {
+    display: none;
+}
+
+.mobile-category__list {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.mobile-category__list::-webkit-scrollbar {
+    display: none;
+}
+
+.mobile-category__item {
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.mobile-category__item:nth-last-of-type(3n) .mobile-category__link {
+    background-color: #87afd8;
+}
+
+.mobile-category__item:nth-last-of-type(3n+1) .mobile-category__link {
+    background-color: #76c9bd;
+}
+
+.mobile-category__item:nth-last-of-type(3n+2) .mobile-category__link {
+    background-color: #88cf81;
+}
+
+.mobile-category__link {
+    --line-height: 2rem;
+    display: block;
+    text-decoration: none;    
+    color: var(--white-color);
+    font-size: 1.4rem;
+    line-height: var(--line-height);
+    height: calc(var(--line-height) * 2);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-align: center;
+    width: 110px;
+    border-radius: 4px;
+    font-weight: 300;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tab-hightlight-color: transparent;
+    padding: 0 6px;
 }
 
 /* Home sort + filter */
@@ -1115,7 +1245,7 @@ i.like-icon  {
     margin: 3px 10px 0;
     color: #595959;
     font-size: 1.2rem;
-    font-weight: 300px;
+    font-weight: 300;
 }
 
 .product-origination {
@@ -1196,6 +1326,7 @@ i.like-icon  {
 
 .home-product__pagination {
     margin: 48px 0 32px;
+    padding-left: 0;
 }
 
 /* Footer */
@@ -1340,10 +1471,6 @@ i.like-icon  {
 .subcribed-list {
     list-style: none;
     margin: 0 20px;
-}
-
-.subcribed-link {
-
 }
 
 .subcribed-img {

@@ -131,5 +131,18 @@
     .home-product-item__origination {
         font-size: 1.1rem;
     }
-    
+    .look-up-frame.look-up-frame__selection {
+        padding-left: 5px;
+        border-left: 1px solid #bebdbd;
+        line-height: 46px;
+    }
+    .look-up-frame--fixed {
+        padding: 0 8px;
+    }
+    .look-up-frame .look-up-frame__input {
+        padding: 0;
+    }
+    .selection-arrow {
+        margin: 0 8px;
+    }
 }

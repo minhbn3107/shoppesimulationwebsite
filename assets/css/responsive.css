@@ -39,6 +39,7 @@
     .policy-list {
         text-align: center;
         line-height: 3rem;
+        padding: 10px 25px;
         border: unset;
     }
 }
@@ -148,5 +149,38 @@
     .footer__heading  {
         text-align: center;
     }
-    
+    .item-link,
+    .footer-payment,
+    .footer-shipment,
+    .footer__download {
+        justify-content: center;
+        text-align: center;
+    }
+    .footer__download-app {
+        flex: unset;
+    }
+    .footer__download-link {
+        text-align: left;
+    }
+    .footer__policy-list {
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+    .policy-list  {
+        padding: 10px 25px;
+    }
+    .policy-link {
+        font-size: 1.4rem;
+    }
+    .footer__subcribed-list {
+        flex-direction: column;
+    }
+    .subcribed-img {
+        width: 162px;
+        height: 60px;
+    }
+    .footer__company-name,
+    .footer__contact-text {
+        font-weight: 400;
+    }
 }

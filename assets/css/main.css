@@ -476,6 +476,124 @@
     color: var(--primary-color);
 }
 
+/* Moblie navigation */
+
+.function-button {
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar-btn {
+    width: 28px;
+    height: 28px;
+    color: var(--white-color);
+    display: none;
+    font-size: 2.6rem;
+    margin-left: 8px;
+    margin-right: 20px;
+}
+
+.nav__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    display: none;
+    animation: fadeIn linear 0.2s;
+}
+
+.navbar-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 100%;
+    background-color: #fff;
+    z-index: 1;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform linear 0.2s, opacity linear 0.2s;
+}
+
+.mobile-accont {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-accont__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+    text-decoration: none;
+    padding-left: 10%;
+    color: #505050;
+    font-weight: 600;
+}
+
+.mobile-accont__name {
+    font-size: 1.8rem;
+}
+
+.navbar-mobile__close {
+    font-size: 3rem;
+    color: #666;
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+}
+
+.close__icon {
+    width: 40px;
+    height: 40px;
+    color: var(--black-color);
+    text-align: center;
+}
+
+.navbar-mobile__list {
+    margin-top: 70px;
+    padding-left: 15%;
+    border-top: 1px solid rgba(0 ,0 ,0 ,0.1);
+}
+
+.menu-list {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.menu-list__icon {
+    font-size: 1.5rem;
+    color: #757575;
+    padding-right: 15px;
+}
+
+.menu-list__item {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 16px 0;
+    font-size: 1.6rem;
+}
+
+.nav__input:checked ~ .nav__overlay {
+    display: block;
+}
+
+.nav__input:checked ~ .navbar-mobile {
+    transform: translateX(0);
+    opacity: 1;
+}
+
 /* Look up bar */
 
 .look-up-bar {

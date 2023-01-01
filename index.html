@@ -117,12 +117,55 @@
                     </ul>
                 </nav>
 
-
                 <!-- Look up bar -->
                 <div class="look-up-bar">
-                    <label for="mobile-search-checkbox" class="header__mobile-search">
-                        <i class="header__mobile-search-icon fa-solid fa-magnifying-glass"></i>
-                    </label>
+                    <div class="function-button">
+                        <label for="menu-bar__input" class="menu-bar-btn">
+                            <i class="fa-solid fa-bars"></i>
+                        </label>
+                        <input type="checkbox" hidden name="" class="nav__input" id="menu-bar__input">
+    
+                        <label for="menu-bar__input" class="nav__overlay"></label>
+                        <nav class="navbar-mobile">
+                            
+                            <div class="mobile-accont">
+                                <label for="menu-bar__input" class="navbar-mobile__close">
+                                    <i class="close__icon fa-solid fa-xmark"></i>
+                                </label>
+                                <a href="" class="mobile-accont__item">
+                                    <img src="./assets/css/img/146863773_857252548174473_7669723348816274664_o_photos_v2_x4_colored.png" alt="" class="user-avatar">
+                                    <span class="mobile-accont__name">Ngọc Minh</span>
+                                </a>
+                            </div>
+                            <ul class="navbar-mobile__list">
+                                <li class="menu-list">
+                                    <i class="menu-list__icon fa-solid fa-house"></i>
+                                    <a href="" class="menu-list__item">Trang chủ</a>
+                                </li>
+                                <li class="menu-list">
+                                    <i class="menu-list__icon fa-solid fa-download"></i>
+                                    <a href="" class="menu-list__item">Tải ứng dụng</a>
+                                </li>
+                                <li class="menu-list">
+                                    <i class="menu-list__icon fa-solid fa-bell"></i>
+                                    <a href="" class="menu-list__item">Thông báo</a>
+                                </li>
+                                <li class="menu-list">
+                                    <i class="menu-list__icon fa-solid fa-question"></i>
+                                    <a href="" class="menu-list__item">Trợ giúp</a>
+                                </li>
+                                <li class="menu-list">
+                                    <i class="menu-list__icon fa-solid fa-right-from-bracket"></i>
+                                    <a href="" class="menu-list__item">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </nav>
+    
+                        <label for="mobile-search-checkbox" class="header__mobile-search">
+                            <i class="header__mobile-search-icon fa-solid fa-magnifying-glass"></i>
+                        </label>
+                    </div>
+
 
                     <div class="header-logo hide-on-tablet">
                         <a href="/" class="header-logo-link">
@@ -1057,6 +1100,7 @@
             </div>
         </footer>
     </div>
+
 
     <!-- Modal -->
     <!-- <div class="modal">
